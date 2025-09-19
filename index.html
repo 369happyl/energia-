@@ -1,1 +1,292 @@
-429: Too Many Requests
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Site Hacker — Lucas</title>
+  <style>
+    /* ===== Reset e fonte ===== */
+    :root{
+      --bg:#020202;
+      --panel:#071009;
+      --neon:#00ff66;
+      --muted:#9adfa8;
+      --glass: rgba(255,255,255,0.04);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: "Courier New", Courier, monospace;
+      background: radial-gradient(ellipse at top left, rgba(0,20,10,0.35), transparent 20%),
+                  linear-gradient(180deg,#00110a 0%, #000 60%);
+      color: var(--muted);
+      overflow-x:hidden;
+    }
+
+    /* ===== Canvas dos números ===== */
+    #binaryCanvas{
+      position:fixed;
+      top:0; left:0;
+      width:100vw; height:100vh;
+      z-index:0;
+      display:block;
+      pointer-events:none;
+      mix-blend-mode:screen;
+      opacity:0.9;
+    }
+
+    /* ===== Conteúdo principal ===== */
+    .container{
+      position:relative;
+      z-index:2;
+      min-height:100vh;
+      padding:48px 18px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+    }
+
+    .card{
+      width:min(1100px, 96%);
+      background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.5));
+      border:1px solid rgba(0,255,120,0.06);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+      padding:28px;
+      border-radius:12px;
+      color: #bfffcf;
+      overflow:hidden;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:18px;
+    }
+
+    .logo{
+      width:54px; height:54px;
+      border-radius:8px;
+      background: linear-gradient(135deg, #002b12, #004421);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:var(--neon);
+      font-size:18px;
+      box-shadow: 0 0 12px rgba(0,255,120,0.08), inset 0 -4px 12px rgba(0,0,0,0.4);
+    }
+
+    h2{
+      font-size:20px;
+      color: var(--neon);
+      line-height:1.38;
+      text-shadow: 0 0 8px rgba(0,255,120,0.12);
+    }
+
+    /* ===== Seções ===== */
+    .section{
+      margin-top:18px;
+      padding:16px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.01));
+      border-radius:8px;
+      border:1px solid rgba(0,255,120,0.03);
+    }
+
+    .section h3{
+      margin-bottom:8px;
+      color: #9fffbf;
+      font-size:16px;
+      letter-spacing:0.6px;
+    }
+
+    .laws-list{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap:12px;
+    }
+
+    .law{
+      background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(255,255,255,0.01));
+      border-radius:6px;
+      padding:10px;
+      border:1px solid rgba(255,255,255,0.02);
+      font-size:14px;
+      color:#cfeee0;
+    }
+
+    .impossible{
+      margin-top:14px;
+      padding:14px;
+      border-radius:8px;
+      background:linear-gradient(90deg, rgba(255,0,0,0.03), rgba(0,0,0,0.02));
+      border:1px solid rgba(255,80,80,0.08);
+      color:#ffd1d1;
+      font-weight:600;
+    }
+
+    footer{
+      margin-top:18px;
+      font-size:12px;
+      color:#7fbf9f;
+      opacity:0.85;
+    }
+
+    /* ===== Responsividade ===== */
+    @media (max-width:640px){
+      h2{font-size:18px}
+      .card{padding:18px}
+    }
+
+    /* ===== "Glitch" subtle for header ===== */
+    @keyframes glitch {
+      0%{transform: translateX(0)}
+      20%{transform: translateX(-1px)}
+      40%{transform: translateX(1px)}
+      60%{transform: translateX(-0.5px)}
+      80%{transform: translateX(0.5px)}
+      100%{transform: translateX(0)}
+    }
+    header h2 { animation: glitch 3.6s infinite; }
+  </style>
+</head>
+<body>
+  <!-- Canvas que desenha os 0/1 caindo -->
+  <canvas id="binaryCanvas" aria-hidden="true"></canvas>
+
+  <div class="container">
+    <div class="card">
+      <header>
+        <div class="logo">0110</div>
+        <!-- O H2 exatamente como você pediu -->
+        <h2>oi meu nome é lucas e tenho 13 anos meu sonho é ser programador e trabalhar nos eua, eu estudo python, c++, js, html, css, física, elétrica, engenharia, matemática e inglês.</h2>
+      </header>
+
+      <!-- Div com leis da termodinâmica e leis de Newton -->
+      <section class="section" id="leis">
+        <h3>Leis da Termodinâmica</h3>
+        <div class="laws-list">
+          <div class="law">
+            <strong>Lei Zeroth (Zéro):</strong>
+            <p>Se dois sistemas estão em equilíbrio térmico com um terceiro, então estão em equilíbrio entre si. Fundamenta a definição de temperatura.</p>
+          </div>
+          <div class="law">
+            <strong>Primeira Lei (Conservação de Energia):</strong>
+            <p>A variação da energia interna de um sistema é igual ao calor trocado com o ambiente menos o trabalho realizado pelo sistema: ΔU = Q − W.</p>
+          </div>
+          <div class="law">
+            <strong>Segunda Lei (Entropia):</strong>
+            <p>Em processos naturais, a entropia total de um sistema isolado tende a aumentar; processos irreversíveis aumentam entropia e limitam eficiência de máquinas térmicas.</p>
+          </div>
+          <div class="law">
+            <strong>Terceira Lei:</strong>
+            <p>Ao aproximar-se do zero absoluto (0 K), a entropia de um cristal perfeitamente ordenado tende a um valor constante (geralmente zero). Não é possível atingir exatamente 0 K por processos finitos.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Div com leis de Newton -->
+      <section class="section" id="newton" style="margin-top:12px;">
+        <h3>Leis de Newton</h3>
+        <div class="laws-list">
+          <div class="law">
+            <strong>1ª Lei — Inércia:</strong>
+            <p>Um corpo permanece em repouso ou em movimento retilíneo uniforme se a resultante das forças sobre ele for zero.</p>
+          </div>
+          <div class="law">
+            <strong>2ª Lei — Dinâmica:</strong>
+            <p>A aceleração de um corpo é proporcional à força resultante aplicada e inversamente proporcional à sua massa: F = m · a.</p>
+          </div>
+          <div class="law">
+            <strong>3ª Lei — Ação e Reação:</strong>
+            <p>Para toda força aplicada por um corpo A em um corpo B, existe uma força igual e contrária aplicada por B em A.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Div dizendo que é impossível gerar energia infinita -->
+      <section class="section" id="energia" style="margin-top:14px;">
+        <h3>Sobre energia infinita</h3>
+        <div class="impossible">
+          é impossível gerar energia infinita?
+        </div>
+        <p style="margin-top:10px; color:#cfeee0; font-size:14px;">
+          plano 1 quero gerar energia infinita com indução eletromagnética 
+          energia colocada em um corpo vai ser a mesma que ele ira gerar
+          como faria um ima entrar e sair de uma bobina sem ajuda de seres humanos e motores ou seja sem energia. 
+          teríamos que realizar um sistema automático que não pararia pela Inércia. 
+          seria impossível sem movimento, piezoeletrecidade, energia elétrica, energia eólica, energia estatica, e energia com temperatura. 
+          nem usando movimento ao nosso favor como aquelas rodas com peso, a resistência do ar a Inércia faria parar, o mesmo que se você girar uma roda de bicicleta ela pararia uma hora ela giraria para sempre.
+        se nós fazermos uma câmara de vácuo, o ar não empediria o sistema de parar porquê não tem ar então ele ficava rodando e eventualmente pararia por causa do calorbque ele gera.
+        resumindo: atualmente não tem energia infinita mas meu sonho é inventar a energia infinita não vou desistir cedo.
+        
+        formulas F=m.a
+                 A=f÷m
+                 M=f÷a
+        F= força de um corpo.
+        A= a aceleração de um corpo.
+        M= a massa do corpo.</p>
+      </section>
+
+      <footer>
+        <small>tchauuuuuuu</small>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    /* ===== Binary rain (estilo Matrix) - usa o canvas para desenhar 0/1 caindo ===== */
+    (function(){
+      const canvas = document.getElementById('binaryCanvas');
+      const ctx = canvas.getContext('2d');
+      let width = canvas.width = innerWidth;
+      let height = canvas.height = innerHeight;
+      const binary = "01011011"; // sequência base que você pediu
+      const fontSize = Math.max(12, Math.floor(width / 80)); // ajusta com largura
+      const columns = Math.floor(width / fontSize);
+      const drops = new Array(columns).fill(1);
+
+      // ajusta em resize
+      window.addEventListener('resize', () => {
+        width = canvas.width = innerWidth;
+        height = canvas.height = innerHeight;
+      });
+
+      function draw(){
+        // fundo sem apagar totalmente para dar efeito de rastro
+        ctx.fillStyle = "rgba(0, 0, 0, 0.15)";
+        ctx.fillRect(0, 0, width, height);
+
+        ctx.font = fontSize + "px Courier New, monospace";
+        // estilo neon com sombra sutil
+        ctx.fillStyle = "rgba(0,255,120,0.92)";
+        ctx.shadowColor = "rgba(0,255,120,0.18)";
+        ctx.shadowBlur = 6;
+
+        for(let i = 0; i < drops.length; i++){
+          // escolhe um caractere aleatório da string binary
+          const char = binary[Math.floor(Math.random()*binary.length)];
+          const x = i * fontSize;
+          const y = drops[i] * fontSize;
+
+          // desenha com leve variação de opacidade e tamanho para profundidade
+          ctx.fillText(char, x, y);
+
+          // reset chance
+          if (y > height && Math.random() > 0.975) {
+            drops[i] = 0;
+          }
+          drops[i]++;
+        }
+        requestAnimationFrame(draw);
+      }
+
+      // inicia com um pouco de variação
+      for (let i=0;i<drops.length;i++) drops[i] = Math.floor(Math.random()*height/fontSize);
+
+      draw();
+    })();
+  </script>
+</body>
+              </html>
