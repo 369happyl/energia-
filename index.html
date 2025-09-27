@@ -159,11 +159,10 @@
     <div class="card">
       <header>
         <div class="logo">0110</div>
-        <!-- O H2 exatamente como você pediu -->
         <h2>oi meu nome é lucas e tenho 13 anos meu sonho é ser programador e trabalhar nos eua, eu estudo python, c++, js, html, css, física, elétrica, engenharia, matemática e inglês.</h2>
       </header>
 
-      <!-- Div com leis da termodinâmica e leis de Newton -->
+      <!-- Leis da Termodinâmica -->
       <section class="section" id="leis">
         <h3>Leis da Termodinâmica</h3>
         <div class="laws-list">
@@ -173,7 +172,7 @@
           </div>
           <div class="law">
             <strong>Primeira Lei (Conservação de Energia):</strong>
-            <p>A variação da energia interna de um sistema é igual ao calor trocado com o ambiente menos o trabalho realizado pelo sistema: ΔU = Q − W.</p>
+            <p>ΔU = Q − W. A variação da energia interna de um sistema é igual ao calor trocado com o ambiente menos o trabalho realizado pelo sistema.</p>
           </div>
           <div class="law">
             <strong>Segunda Lei (Entropia):</strong>
@@ -186,7 +185,7 @@
         </div>
       </section>
 
-      <!-- Div com leis de Newton -->
+      <!-- Leis de Newton -->
       <section class="section" id="newton" style="margin-top:12px;">
         <h3>Leis de Newton</h3>
         <div class="laws-list">
@@ -205,39 +204,66 @@
         </div>
       </section>
 
-      <!-- Div dizendo que é impossível gerar energia infinita -->
+      <!-- Energia infinita -->
       <section class="section" id="energia" style="margin-top:14px;">
         <h3>Sobre energia infinita</h3>
         <div class="impossible">
           é impossível gerar energia infinita?
         </div>
         <p style="margin-top:10px; color:#cfeee0; font-size:14px;">
-          plano 1 quero gerar energia infinita com indução eletromagnética 
-          energia colocada em um corpo vai ser a mesma que ele ira gerar
-          como faria um ima entrar e sair de uma bobina sem ajuda de seres humanos e motores ou seja sem energia. 
-          teríamos que realizar um sistema automático que não pararia pela Inércia. 
-          seria impossível sem movimento, piezoeletrecidade, energia elétrica, energia eólica, energia estatica, e energia com temperatura. 
-          nem usando movimento ao nosso favor como aquelas rodas com peso, a resistência do ar a Inércia faria parar, o mesmo que se você girar uma roda de bicicleta ela pararia uma hora ela giraria para sempre.
-        se nós fazermos uma câmara de vácuo, o ar não empediria o sistema de parar porquê não tem ar então ele ficava rodando e eventualmente pararia por causa do calorbque ele gera.
-        resumindo: atualmente não tem energia infinita mas meu sonho é inventar a energia infinita não vou desistir cedo.
-        
-        formulas F=m.a
-                 A=f÷m
-                 M=f÷a
-        F= força de um corpo.
-        A= a aceleração de um corpo.
-        M= a massa do corpo.
-        criei uma formula que calcula suas eficiências em estudos 
-          formula ef=r×con÷t
-ef=eficiência 
-r=resultado ou nota da prova
-t=tempo estudado
-con=concentração, você estava distraído
+          Atualmente não existe energia infinita. Meu sonho é criar uma forma de gerar energia infinita usando ideias avançadas de física e robótica, mas sistemas reais sempre sofrem com inércia, resistência do ar e calor.
+        </p>
+      </section>
 
-a fórmula calcula sua nota apenas em 0 a 10, se vc tiro nota 82, coloque 8,2, ok.
-quanto maior for seu ef melhor foi seu estudo
-se vc estava 75% concentrado substitua o con por 0,75, se vc estava 100% concentrado o substitua por 1.
-nunca coloque no lugar de t um número 0 porque com certeza vc vai tirar ef menor que 3 dependendo da sua nota, se você não tem estudado vc não tem ficado concentrado então no con e no t você deve colocar 0 se você não estudou sua eficiência provavelmente seria 0 por não ter estudado é impossível você ver sua eficiência de estudos.p>
+      <!-- Fórmulas de estudo -->
+      <section class="section" id="formulas"
+        <!-- Fórmulas de estudo -->
+      <section class="section" id="formulas" style="margin-top:14px;">
+        <h3>Fórmulas de Eficiência de Estudo</h3>
+        <div class="laws-list">
+          <div class="law">
+            <strong>Eficiência Básica:</strong>
+            <p>
+              Ef = r × con ÷ t<br>
+              Ef = eficiência<br>
+              r = resultado ou nota da prova (0 a 10)<br>
+              t = tempo estudado (horas)<br>
+              con = concentração (0 a 1, ex: 0,75 = 75%)<br>
+              <em>Exemplo:</em> se r = 8, con = 0,75, t = 2h → Ef = 8 × 0,75 ÷ 2 = 3
+            </p>
+          </div>
+          <div class="law">
+            <strong>Nota Prevista para um tempo e concentração:</strong>
+            <p>
+              NP = (con × t^p) ÷ (t^p + k^p) × 10<br>
+              NP = nota prevista<br>
+              t = tempo estudado (horas)<br>
+              con = concentração (0 a 1)<br>
+              p = poder de aprendizado (quanto maior, mais rápido aprende)<br>
+              k = dificuldade do conteúdo (quanto maior, mais difícil)<br>
+              <em>Exemplo:</em> t = 3h, con = 0,8, p = 2, k = 4 → NP ≈ 4,6
+            </p>
+          </div>
+          <div class="law">
+            <strong>Concentração necessária para atingir uma nota:</strong>
+            <p>
+              con = (NP × (t^p + k^p)) ÷ (10 × t^p)<br>
+              Permite calcular a concentração mínima necessária para atingir NP em t horas.<br>
+              <em>Exemplo:</em> NP = 8, t = 2h, p = 2, k = 4 → con ≈ 0,94 (94%)
+            </p>
+          </div>
+          <div class="law">
+            <strong>Tempo necessário para atingir uma nota:</strong>
+            <p>
+              t = k × ((NP ÷ (con × 10 − NP))^(1/p))<br>
+              Permite calcular quantas horas você precisa estudar com determinada concentração para atingir NP.<br>
+              <em>Exemplo:</em> NP = 9, con = 0,8, p = 2, k = 4 → t ≈ 4,4h
+            </p>
+          </div>
+        </div>
+        <p style="margin-top:10px; color:#cfeee0; font-size:14px;">
+          Use essas fórmulas para planejar seus estudos: quanto maior sua concentração e mais tempo dedicado, maior será sua nota prevista. Ajuste p e k conforme a dificuldade do conteúdo e seu aprendizado.
+        </p>
       </section>
 
       <footer>
@@ -247,57 +273,44 @@ nunca coloque no lugar de t um número 0 porque com certeza vc vai tirar ef meno
   </div>
 
   <script>
-    /* ===== Binary rain (estilo Matrix) - usa o canvas para desenhar 0/1 caindo ===== */
+    /* ===== Binary rain (estilo Matrix) ===== */
     (function(){
       const canvas = document.getElementById('binaryCanvas');
       const ctx = canvas.getContext('2d');
       let width = canvas.width = innerWidth;
       let height = canvas.height = innerHeight;
-      const binary = "01011011"; // sequência base que você pediu
-      const fontSize = Math.max(12, Math.floor(width / 80)); // ajusta com largura
+      const binary = "01011011";
+      const fontSize = Math.max(12, Math.floor(width / 80));
       const columns = Math.floor(width / fontSize);
       const drops = new Array(columns).fill(1);
 
-      // ajusta em resize
       window.addEventListener('resize', () => {
         width = canvas.width = innerWidth;
         height = canvas.height = innerHeight;
       });
 
       function draw(){
-        // fundo sem apagar totalmente para dar efeito de rastro
         ctx.fillStyle = "rgba(0, 0, 0, 0.15)";
         ctx.fillRect(0, 0, width, height);
-
         ctx.font = fontSize + "px Courier New, monospace";
-        // estilo neon com sombra sutil
         ctx.fillStyle = "rgba(0,255,120,0.92)";
         ctx.shadowColor = "rgba(0,255,120,0.18)";
         ctx.shadowBlur = 6;
 
         for(let i = 0; i < drops.length; i++){
-          // escolhe um caractere aleatório da string binary
           const char = binary[Math.floor(Math.random()*binary.length)];
           const x = i * fontSize;
           const y = drops[i] * fontSize;
-
-          // desenha com leve variação de opacidade e tamanho para profundidade
           ctx.fillText(char, x, y);
-
-          // reset chance
-          if (y > height && Math.random() > 0.975) {
-            drops[i] = 0;
-          }
+          if (y > height && Math.random() > 0.975) drops[i] = 0;
           drops[i]++;
         }
         requestAnimationFrame(draw);
       }
 
-      // inicia com um pouco de variação
       for (let i=0;i<drops.length;i++) drops[i] = Math.floor(Math.random()*height/fontSize);
-
       draw();
     })();
   </script>
 </body>
-              </html>
+</html>
