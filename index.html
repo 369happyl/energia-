@@ -10,7 +10,7 @@
       --bg:#020202;
       --panel:#071009;
       --neon:#00ff66;
-      --muted:#9adfa
+      --muted:#9adfa;
       --glass: rgba(255,255,255,0.04);
     }
     *{box-sizing:border-box;margin:0;padding:0}
@@ -136,10 +136,9 @@
     /* ===== Responsividade ===== */
     @media (max-width:640px){
       h2{font-size:18px}
-      .card{padding:18px}
     }
 
-    /* ===== "Glitch" subtle for header ===== */
+    /* ===== "Glitch" sutil no header ===== */
     @keyframes glitch {
       0%{transform: translateX(0)}
       20%{transform: translateX(-1px)}
@@ -152,14 +151,14 @@
   </style>
 </head>
 <body>
-  <!-- Canvas que desenha os 0/1 caindo -->
+  <!-- Canvas dos 0/1 caindo -->
   <canvas id="binaryCanvas" aria-hidden="true"></canvas>
 
   <div class="container">
     <div class="card">
       <header>
         <div class="logo">0110</div>
-        <h2>oi meu nome é lucas sou um dos adm do grupo tenho 13  eu estudo python, c++, js, html, css, física, elétrica, engenharia, matemática, inglês, astronomia, robótica e eletronica esse é o site do grupo inteligentes 9, https://chat.whatsapp.com/HPNfptbGOjb6hED4RRv4gy</h2>
+        <h2>oi meu nome é lucas, sou um dos adm do grupo, tenho 13 anos. Eu estudo Python, C++, JS, HTML, CSS, física, elétrica, engenharia, matemática, inglês, astronomia, robótica e eletrônica. </h2>
       </header>
 
       <!-- Leis da Termodinâmica -->
@@ -208,17 +207,15 @@
       <section class="section" id="energia" style="margin-top:14px;">
         <h3>Sobre energia infinita</h3>
         <div class="impossible">
-          é impossível gerar energia infinita?
+          É impossível gerar energia infinita?
         </div>
         <p style="margin-top:10px; color:#cfeee0; font-size:14px;">
           Atualmente não existe energia infinita. Meu sonho é criar uma forma de gerar energia infinita usando ideias avançadas de física e robótica, mas sistemas reais sempre sofrem com inércia, resistência do ar e calor.
-          Fiz um plano de gerar energia ilimitada, é só pegar um motor e uma cachoeira de 3 metros, q vai dar 60 litros por segundo, aí o motor fica de baixo da cachoeira aí a água bate no motor q faz ele girar e enquanto ele gira vai ter 3 KW de energia, isso vai durar até a cachoeira acabar ou seja 1000 anos de energia infinita, o problema é que precisa passar graxa a cada 2 anos e não deixar o motor enferrujar, se tiver tudo certo vamos ficar sem pagar conta de luz por uns 1500 anos ou mais, eu pesquisei e vai dar certo isso sim, nenhuma lei da termodinâmica impede isso.
+          Fiz um plano de gerar energia ilimitada: usar um motor embaixo de uma cachoeira de 3 metros, com 60 litros por segundo. A água bate no motor, ele gira e produz 3 kW de energia constante — isso duraria enquanto a cachoeira existir. É quase “energia infinita” natural, só precisa de manutenção a cada 2 anos.
         </p>
       </section>
 
-      <!-- Fórmulas de estudo -->
-      <section class="section" id="formulas"
-        <!-- Fórmulas de estudo -->
+      <!-- Fórmulas de Estudo -->
       <section class="section" id="formulas" style="margin-top:14px;">
         <h3>Fórmulas de Eficiência de Estudo</h3>
         <div class="laws-list">
@@ -230,46 +227,47 @@
               r = resultado ou nota da prova (0 a 10)<br>
               t = tempo estudado (horas)<br>
               con = concentração (0 a 1, ex: 0,75 = 75%)<br>
-              <em>Exemplo:</em> se r = 8, con = 0,75, t = 2h → Ef = 8 × 0,75 ÷ 2 = 3
+              <em>Exemplo:</em> se r = 8, con = 0,75, t = 2h → Ef = 3
             </p>
           </div>
           <div class="law">
-            <strong>Nota Prevista para um tempo e concentração:</strong>
+            <strong>Nota Prevista:</strong>
             <p>
               NP = (con × t^p) ÷ (t^p + k^p) × 10<br>
               NP = nota prevista<br>
               t = tempo estudado (horas)<br>
               con = concentração (0 a 1)<br>
-              p = poder de aprendizado (quanto maior, mais rápido aprende)<br>
-              k = dificuldade do conteúdo (quanto maior, mais difícil)<br>
+              p = poder de aprendizado<br>
+              k = dificuldade do conteúdo<br>
               <em>Exemplo:</em> t = 3h, con = 0,8, p = 2, k = 4 → NP ≈ 4,6
             </p>
           </div>
           <div class="law">
-            <strong>Concentração necessária para atingir uma nota:</strong>
+            <strong>Concentração necessária:</strong>
             <p>
               con = (NP × (t^p + k^p)) ÷ (10 × t^p)<br>
-              Permite calcular a concentração mínima necessária para atingir NP em t horas.<br>
               <em>Exemplo:</em> NP = 8, t = 2h, p = 2, k = 4 → con ≈ 0,94 (94%)
             </p>
           </div>
           <div class="law">
-            <strong>Tempo necessário para atingir uma nota:</strong>
+            <strong>Tempo necessário:</strong>
             <p>
               t = k × ((NP ÷ (con × 10 − NP))^(1/p))<br>
-              Permite calcular quantas horas você precisa estudar com determinada concentração para atingir NP.<br>
-              <em>Exemplo:</em> NP = 9, con = 0,8, p = 2, k = 4 → t ≈ 4,4h, essa é as formulas 
-              agora vem tudo sobre meus planos moc roma portulandes.  <section class="section" id="fontes"> 
-                <h3>fontes</h3>
-        <div class="laws-list">
-          <div class="law">
-​quanto mais próximo a velocidade da luz você ir , mais pro futuro você vai
+              <em>Exemplo:</em> NP = 9, con = 0,8, p = 2, k = 4 → t ≈ 4,4h
             </p>
           </div>
         </div>
-        <p style="margin-top:10px; color:#cfeee0; font-size:14px;">
-          nice
-        </p>
+      </section>
+
+      <!-- Fontes -->
+      <section class="section" id="fontes" style="margin-top:14px;">
+        <h3>Fontes</h3>
+        <div class="laws-list">
+          <div class="law">
+            <p>Quanto mais próximo da velocidade da luz você for, mais rápido o tempo passa para você — é como viajar para o futuro.</p>
+          </div>
+        </div>
+        <p style="margin-top:10px; color:#cfeee0; font-size:14px;">nice</p>
       </section>
 
       <footer>
@@ -319,4 +317,4 @@
     })();
   </script>
 </body>
-</html>
+  </html>
